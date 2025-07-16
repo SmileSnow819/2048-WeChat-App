@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 游戏菜单 -->
+  <view class="game_menu_container">
+    <view class="game_menu">
+      <view class="game_point" bindtap="restartGame">
+        分数
+        <text style="font-weight:800">{{points}}</text>
+      </view>
+      <view class="game_point">
+        步数
+        <text style="font-weight:800">{{step}}</text>
+      </view>
+      <view class="game_point" bindtap="restartGame">
+        <text style="font-weight:800">再来一局</text>
+      </view>
+      <view class="game_point" bindtap="startAI">
+        <text style="font-weight:800">AI</text>
+      </view>
+    </view>
+  </view>
+  <!-- 游戏区域 -->
+  <view id="game-container" class="game-container" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd">
+    <!-- draw-bacc-block -->
+    <block wx:for="{{grid}}" wx:key="index">
+      <view class="grid-cell" style="top:{{item.top}}rpx; left:{{item.left}}rpx; background-color:{{item.bgColor}};"></view>
+    </block>
+    <!-- draw-block -->
+    <block wx:for="{{blocks}}" wx:key="id">
+      <view class="block"  style="top:{{item.top}}rpx; left:{{item.left}}rpx; background-color:{{item.bgColor}}; width:{{item.size}}rpx; height:{{item.size}}rpx; line-height:{{item.size}}rpx; ">
+        <text>{{item.number}}</text>
+      </view>
+    </block>
+  </view>
+
+      <view class="game-info">
+      <text style="font-size: 18px">游戏说明：</text
+      >使用上下左右箭头移动。当相同的两个碰撞时，它们会合并成一个！
+    </view>
+</view>

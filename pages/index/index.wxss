@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 顶部菜单 */
+.game_menu_container {
+  display: flex;
+  justify-content: center;
+}
+
+.game_menu {
+  height: 80px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_point {
+  font-family: Oswald, sans-serif;
+  box-shadow: 5px 5px 3px gray;
+  margin-left: 15px;
+  height: 100rpx;
+  width: 130rpx;
+  color: white;
+  background-color: rgb(167,141,116);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* 数字块（动画效果可以借助 wx.createAnimation 实现） */
+.block {
+  position: absolute;
+  z-index: 5;
+  font-size: 50rpx;
+  color: rgb(119, 110, 101);
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+}
+
+/* 背景格子 */
+.grid-cell {
+  position: absolute;
+  z-index: 3;
+  width: 130rpx;
+  height: 130rpx;
+  background-color: #E0F7FA;
+  border-radius: 5px;
+  box-shadow: 3px 3px 1px gray;
+}
+
+/* 游戏区域样式 */
+.game-container {
+  position: relative;
+  margin: 20px auto;
+  width: 600rpx;
+  height: 600rpx;
+  background-color: rgb(187,173,160);
+  border-radius: 20px;
+}
+
+.game-info {
+  margin: 0 auto;
+  width: 600rpx;
+  text-align: center;
+  color: #776e65;
+  font-weight: 800;
+}
